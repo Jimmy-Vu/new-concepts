@@ -10,16 +10,32 @@
 		"128": "images/icon-128.png"
 	},
 	"content_scripts": [
-    {
-      "js": [
+		{
+			"js": [
 				"scripts/content.js"
 			],
-      "matches": [
-        "https://developer.chrome.com/docs/extensions/*",
-        "https://developer.chrome.com/docs/webstore/*",
+			"matches": [
+				"https://developer.chrome.com/docs/extensions/*",
+				"https://developer.chrome.com/docs/webstore/*",
 				"https://developer.chrome.com/docs/devtools/*",
 				"https://developer.chrome.com/docs/workbox/*"
-      ]
-    }
-  ]
+			]
+		},
+		{
+			"js": [
+				"scripts/content-devto.js"
+			],
+			"matches": [
+				"https://dev.to/*"
+			]
+		},
+		{
+			"js": [
+				"scripts/content-mdn.js"
+			],
+			"matches": [
+				"https://developer.mozilla.org/en-US/docs/*"
+			]
+		}
+	]
 }
